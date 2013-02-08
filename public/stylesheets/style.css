@@ -1,0 +1,26 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #e83c10;
+  text-decoration: none;
+}
+
+.container {
+  margin: 0px auto;
+  width: 640px;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+form, div.recent {
+  margin: 50px;
+}
+
+span {
+  display: inline-block;
+  width: 150px;
+}

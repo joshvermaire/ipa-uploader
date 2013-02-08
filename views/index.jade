@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  h1= title
+  form(method="post", enctype="multipart/form-data", id="js_form")
+    p 
+      span App Name
+      input(name='title', id='js_title')
+    p 
+      span Version Number
+      input(name='version', id='js_version')
+    p 
+      span File
+      input.button(type='file', name='file', id='js_file')
+    p
+      input.button(type='submit', value='Upload', id='js_submit')
+
+  - if (global.lastUpload)
+    div.recent
+      h2 Most Recently Uploaded App
+      div #{ global.lastUpload.title } v#{ global.lastUpload.version } -- 
+        a(href='itms-services://?action=download-manifest&amp;url=http://172.20.25.210:8235/' + global.lastUpload.directory) Download
